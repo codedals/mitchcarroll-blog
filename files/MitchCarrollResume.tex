@@ -1,0 +1,268 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,10pt]{article}
+
+\newlength{\outerbordwidth}
+
+\pagestyle{empty}
+
+\raggedbottom
+
+\raggedright
+
+\usepackage[svgnames]{xcolor}
+
+\usepackage{framed}
+
+\usepackage{tocloft}
+
+\usepackage{CJKutf8}
+
+%-----------------------------------------------------------
+
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+\definecolor{outlinecolor}{RGB}{255,127,0}
+\definecolor{outlinecolorB}{RGB}{255,127,0}
+
+%-----------------------------------------------------------
+
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+
+\setlength{\headheight}{-0.25in}
+
+\setlength{\headsep}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+
+\setlength{\paperheight}{11in}
+
+\setlength{\paperwidth}{8.5in}
+
+\setlength{\tabcolsep}{0in}
+
+\setlength{\textheight}{9.75in}
+
+\setlength{\textwidth}{7in}
+
+\setlength{\topmargin}{-0.3in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+%Custom commands
+\newcommand{\role}[1]{ #1 in this role included:}
+
+\newcommand{\rolecurrent}[1]{ #1 in this role include:}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+\newcommand{\resheading}[1]{\vspace{8pt}
+
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+
+    \end{shaded}
+
+  }\vspace{-5pt}
+
+}
+
+\newcommand{\ressubheading}[5]{
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+
+		\textbf{#1} & #2 \\
+
+		\textit{#3} & \textit{#4} \\
+                & {#5}
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ittitle}[1]{\item #1}
+
+\newcommand{\itskills}[3]{
+\begin{itemize}
+\item{#1}
+\end{itemize}
+\begin{tabular*}{3.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+  \texttt{#2}  & \texttt{#3}
+\end{tabular*}\vspace{-6pt}}
+  
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Mitchell Aaron Carroll} & U.S. Citizen \\
+
+Senior Web Developer & mitch@mitchcarroll.com \\
+
+Tokyo, Japan & http://www.mitchcarroll.com \\
+\end{tabular*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Work Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+
+	\ressubheading{Rakuten, Inc -- \scriptsize{Internet Services (10,000+ employees)}}{Tokyo, Japan}{Application Engineer}{3/2013 - Current}{http://global.rakuten.com/corp/worldwide/}
+        
+        \rolecurrent{Responsibilities and Achievements}
+	\begin{itemize}
+
+          \resitem{Scrum Master}
+          \resitem{Clarify design specifications from business unit}
+          \resitem{Define clear development schedule for local and offshore teams}
+          \resitem{Support junior engineers in software architecture design}
+
+	\end{itemize}
+\item
+
+	\ressubheading{Virus Interactive -- \scriptsize{Web, Mobile, and PC Development Studio (15-20 employees)}}{Bangkok, Thailand}{CTO of Mobile and Web Development}{7/2011 - 11/2012}{http://www.virusinteractive.com}
+        
+        \role{Responsibilities and Achievements}
+	\begin{itemize}
+
+          \resitem{Design architecture for new software}
+          \resitem{Build development teams for new products}
+	  \resitem{Designed and developed API Oriented Software in \texttt{Ruby} leading to a client agnostic solution which could be used as a backend for any mobile client}
+          \resitem{Redesigned auction software to a scalable solution which could handle more than 3 times the number of clients and cost 40\% less in server expenses.}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Pikkle K.K. -- \scriptsize{Mobile SNS Game Development Studio (15-20 employees)}}{Tokyo, Japan}{Mobile Game Developer}{4/2010 - 3/2011}{http://www.pikkle.com/}
+
+        \role{Responsibilities and Achievements}
+	\begin{itemize}
+
+	  \resitem{Develop/Maintain various mobile games' main event/response cycles}
+          \resitem{Analyze game metrics to better cater games to public taste}
+          \resitem{Created rapid game map manipulation software which allowed the creation of 100\% more game levels in less than 1 week.}
+          \resitem{Developed online database analytic system to capture game metrics }
+
+	\end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{IT Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item{Languages:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{Ruby}  & \texttt{Clojure} \\
+    \end{tabular*}\vspace{-6pt}
+    
+  \item{Databases SQL:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{MySQL}  & \texttt{PostgreSQL}
+    \end{tabular*}\vspace{-6pt}
+
+  \item{Databases NoSQL:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{Redis}  & \texttt{Memcached}
+    \end{tabular*}\vspace{-6pt}
+
+ \item{Application Servers:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{Nginx}  & \texttt{Apache}
+    \end{tabular*}\vspace{-6pt}
+
+ \item{Deployment:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{Co-location}  & \texttt{In-house} \\
+      \texttt{Amazon Web Services}  & \texttt{Heroku}
+    \end{tabular*}\vspace{-6pt}
+  
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{General Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+ \item{Languages:}
+
+    \begin{tabular*}{4.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+      \texttt{English (Native)}  & \texttt{Japanese (Daily Conversation)} 
+    \end{tabular*}\vspace{-6pt}
+
+\vspace{5 mm}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Blog, Projects, and OSS}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item \ressubheading{MitchCarroll.com}{http://www.mitchcarroll.com}{Personal Blog}{2012 - Current}
+
+
+\end{itemize}
+  
+
+\resheading{Personal}
+
+\begin{itemize}
+
+\item {\bf Hobbies:} Chess, Sci-fi Novels, Video Games, Programming
+
+\item {\bf Affiliations} Pi Alpha Phi
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+	\ressubheading{Michigan State University}{East Lansing, MI}{B.S. Entomology}{2001 - 2006}
+
+\end{itemize}
+
+\end{document}
